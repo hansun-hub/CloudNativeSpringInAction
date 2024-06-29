@@ -180,6 +180,7 @@ ID 및 액세스 관리 구현 위한 표준 몇가지 존재 - 이 책에서는
 : 환영 메시지 반환하는 HTTP 엔드포인트 하나 갖는 RESTful 서비스 구현 하기 ! </br>
 : 서비스의 기본 기술 스택은 스프링 ! </br>
 : 시스템의 아키텍처
+</br>
 ![image](https://github.com/hansun-hub/CloudNativeSpringInAction/assets/68306239/0ecf8dd8-1b9e-4eca-91cc-296071e014be)
 
 </br>

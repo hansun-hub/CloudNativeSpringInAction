@@ -225,8 +225,65 @@ JAR 로 패키징되어있다? => 실행할 public static void main(String[] arg
 main() 메서드를 정의해 애플리케이션 실행함 </br>
 </br>
 
-> @SpringBootApplication : 스프링 설정 클래스를 정의하고 컴포넌트 스캔과 스프링 부트 자동 설정을 실행함
-> public static void main(String[] args) 메서드 : 애플리케이션을 시작하는 메서드
+
+public static void main(String[] args) 메서드 :</br>
+애플리케이션을 시작하는 메서드</br>
+
+</br>
+
+@SpringBootApplication :</br>
+스프링 설정 클래스를 정의하고 컴포넌트 스캔과 스프링 부트 자동 설정을 실행함
+세 가지 다른 애너테이션을 한꺼번에 포함</br>
+- @Configuration : 해당 클래스가 빈을 정의하는 클래스임을 나타냄
+- @ComponentScan : 컴포넌트 검색을 통해 빈을 찾아 스프링 콘텍스트에 자동으로 등록함
+- @EnableAutoConfiguration : 스프링 부트에서 제공하는 자동 설정 기능을 활성화함
+</br>
+우리 프로젝트의 경우 자동설정 기능 뭐있냐?... </br>
+=> Spring-boot-starter-web에 의존 => </br>
+스프링 부트는 임베티드 톰캣 서버 인스턴스를 초기화, 애플리케이션 실행 위한 최소한의 설정 적용해 실행함 </br>
+</br>
+지금까지 설정에 대해 살펴봄 .. 카탈로그 서비스에서 HTTP 엔드폰인트를 외부로 노출해볼 것 . </br>
+</br>
+
+
+
+### 4. 컨트롤러 구현 
+이제 비즈니스 로직을 구현할 때임 </br>
+: 카탈로그 서비스는 인사말을 반환하는 HTTP GET 엔드포인트를 노출함 </br>
+: 컨트롤러 클래스에서 이에 대한 핸들러를 정의 가능
+
+</br>
+- 프로젝트에서 HomeController 클래스 생성 하고 루트 엔드포인트로 GET 요청 처리 메서드 구현할 것 
+- @RestController : REST/HTTP 엔드포인트를 위한 핸들러를 정의하는 클래스로 인식 
+- @GetMapping("/") : 루트 엔드포인트로 GET 요청을 처리 
+
+</br>
+
+### 5. 애플리케이션 테스트 
+build.gradle 파일은 스프링 애플리케이션을 테스트하는 데 필요한 의존성 라이브러리를 자동으로 가져옴 </br>
+
+![image](https://github.com/hansun-hub/CloudNativeSpringInAction/assets/68306239/494eb751-48b6-4f4b-87c8-45d4c70308ab)
+
+
+</br>
+@SpringBootTest : </br>
+테스트를 실행할 전체 스프링 애플리케이션 콘텍스트를 로드함 </br>
+지금 코드를 보면, 테스트 케이스 하나에, 그마저도 비어있지만 => 스프링 콘텍스트가 올바르게 로드되었는지 확인하는데 사용할것</br>
+</br>
+
+터미널 - command Prompt 창 키기  -애플리케이션 루트 폴더 (catalog-service)로 이동 - 에러 발생 </br>
+
+https://velog.io/@kcho32/Execution-failed-for-task-compileJava.-invalid-source-release-11
+</br>
+https://yungenie.tistory.com/11
+</br>
+java17이 설치되어 있지 않았던 것 같다... 
+</br>
+
+
+
+</br>
+
 
 
 

@@ -205,6 +205,29 @@ C4모델을 따라 만든 아키텍처 다이어그램임 </br>
 스프링 이니셜라이저...?</br>
    : 브라우저 또는 REST API 통해 JVM 기반 프로젝트 생성휘해 사용하는 편리한 서비스 </br>
 
+<img width="1274" alt="image" src="https://github.com/hansun-hub/CloudNativeSpringInAction/assets/68306239/19e7f035-4f6f-4e79-950e-42af8f46d65b">
+
+
+### 2. 빌드 설정
+이 프로젝트가 포함하는 주요 의존성 라이브러리는 다음과 같음</br>
+- 스프링 웹: 스프링 MVC로 웹 애플리케이션 빌드 시 필요한 라이브러리 제공/ 임베디드 서버로는 톰캣 포함
+- 스프링 부트 테스트 : 테스트 할 수 있는 여러 라이브러리 및 유틸리티 제공
+
+
+</br>
+
+### 3. 애플리케이션 부트스트래핑 
+앞서 spring initializer 에서 JAR 패키징 옵션 선택함 </br>
+JAR 로 패키징되어있다? => 실행할 public static void main(String[] args) 메서드를 시작할 때</br>
+가지고 있어야 함 => 스프링 부트도 마찬가지  ! </br>
+</br>
+이 카탈로그 서비스에서는 자동 생성된 CatalogServiceApplication이라는 클래스 안에</br>
+main() 메서드를 정의해 애플리케이션 실행함 </br>
+</br>
+
+> @SpringBootApplication : 스프링 설정 클래스를 정의하고 컴포넌트 스캔과 스프링 부트 자동 설정을 실행함
+> public static void main(String[] args) 메서드 : 애플리케이션을 시작하는 메서드
+
 
 
 

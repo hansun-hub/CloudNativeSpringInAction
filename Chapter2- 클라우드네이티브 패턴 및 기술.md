@@ -277,13 +277,27 @@ https://velog.io/@kcho32/Execution-failed-for-task-compileJava.-invalid-source-r
 </br>
 https://yungenie.tistory.com/11
 </br>
-java17이 설치되어 있지 않았던 것 같다... 
+java17이 설치되어 있지 않았던 것 같다.-> 설치되어있었는데 위치가 이상해서 환경변수를 변경해주었다. 
 </br>
 
-
-
+./gradlew test 입력 => BUILD SUCCESSFUL (녹색)
 </br>
 
+## 6. 애플리케이션 실행 
+구현 끝났으니 실행할 수 잇음 </br>
+- ./gradlew bootRun 입력 : 애플리케이션 실행됨
+  </br>
+애플리케이션 시작은 두 가지 단계.. </br> 
+- 내장된 톰캣 서버의 초기화 및 실행
+- 스프링 애플리케이션 콘텍스트의 초기화 및 실행
+
+</br>
+이제 브라우저 창을 열고 http://localhost:8080/ 방문하면 환영한다는 응답확인가능 </br>
+다음 단계는 애플리케이션을 클라우드에 배포하는 것 </br>
+어떤 클라우드 인프라로도 배포할 수 있으려면 먼저 컨테이너화해야함 ! </br>
+</br>
+
+## 2.3 도커를 통한 애플리케이션 컨테이너화 
 
 
 

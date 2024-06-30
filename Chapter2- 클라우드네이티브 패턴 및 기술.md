@@ -272,12 +272,12 @@ build.gradle 파일은 스프링 애플리케이션을 테스트하는 데 필�
 </br>
 
 터미널 - command Prompt 창 키기  -애플리케이션 루트 폴더 (catalog-service)로 이동 - 에러 발생 </br>
-
+! 참고 블로그❗️<br>
 https://velog.io/@kcho32/Execution-failed-for-task-compileJava.-invalid-source-release-11
 </br>
 https://yungenie.tistory.com/11
 </br>
-java17이 설치되어 있지 않았던 것 같다.-> 설치되어있었는데 위치가 이상해서 환경변수를 변경해주었다. 
+: java17이 설치되어 있지 않았던 것 같다.-> 설치되어있었는데 위치가 이상해서 환경변수를 변경해주었다. 
 </br>
 
 ./gradlew test 입력 => BUILD SUCCESSFUL (녹색)
